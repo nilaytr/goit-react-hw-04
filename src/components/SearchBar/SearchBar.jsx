@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import { IoSearch } from "react-icons/io5";
 import css from './SearchBar.module.css';
 
 const SearchBar = ({ onSubmit }) => {
@@ -12,22 +13,24 @@ const SearchBar = ({ onSubmit }) => {
             return;
         }
         onSubmit(search);
+        setSearch("");
     }
 
     return (
-        <header>
-            <Toaster position="top-center" reverseOrder={false}/>
+        <header className={css.searchBar}>
+            <Toaster position="bottom-center" reverseOrder={false}/>
             <form onSubmit={handleSubmit}>
-                <input
-                    class="input"
+                <div>
+                  <IoSearch className={css.icon} size={28} onClick={handleSubmit} />
+                   <input
                     type="text"
-                    autocomplete="off"
-                    autofocus
+                    autoComplete="off"
+                    autoFocus
                     placeholder="Search images and photos"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                />
-                <button type="submit">Search</button>
+                   /> 
+                </div>
             </form>
         </header>
     );

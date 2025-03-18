@@ -1,0 +1,31 @@
+.searchBar {
+    display: flex;
+    justify-content: center;
+    background-color: darkblue;
+    padding: 20px;
+    padding-top: 10px;
+}
+
+.searchBar form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    cursor: pointer;
+    margin-right: 5px;
+    color: white;
+}
+
+.searchBar input {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    width: 300px;
+}
+
+
+

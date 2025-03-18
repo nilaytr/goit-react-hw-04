@@ -1,0 +1,19 @@
+.imageDiv {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid gray;
+    cursor: pointer;
+    overflow: hidden;
+    max-height: 250px;       
+}
+
+.imageDiv:hover {
+    box-shadow: 0 2px 8px rgb(0, 0, 0);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
